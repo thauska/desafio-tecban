@@ -9,7 +9,7 @@ const Main = () => {
   const [url, changeUrl] = React.useState('https://github.com');
 
   const loadApi = () => {
-    startAuthentication().then((data) => changeUrl(data.url));
+    startAuthentication(1).then((data) => changeUrl(data.url));
   };
 
   React.useEffect(loadApi, []);

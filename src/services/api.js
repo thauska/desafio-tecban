@@ -1,11 +1,11 @@
 import HTTPClient from './http';
 import qs from 'qs';
 
-export async function startAuthentication() {
+export async function startAuthentication(bankId) {
   try {
     const config = {
       method: 'get',
-      url: '/startAuthentication',
+      url: `/startAuthentication/${bankId}`,
       headers: {},
     };
 
