@@ -3,12 +3,18 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 // PAGES
 import Main from '~/pages/Main';
+import Login from '~/pages/Login';
 
 const paths = [
   {
     path: 'Main',
     title: 'Principal',
     screen: Main,
+  },
+  {
+    path: 'Login',
+    title: 'Login',
+    screen: Login,
   },
 ];
 
@@ -32,6 +38,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="main">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="Main">{renderRoutes()}</Stack.Navigator>
   );
 }

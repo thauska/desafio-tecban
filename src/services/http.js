@@ -1,11 +1,10 @@
 import axios from 'axios';
 
 const http = axios.create({
-  baseURL: 'https://',
+  baseURL: 'http://192.168.0.10:3000',
   timeout: 1000,
 });
 
 http.defaults.headers.post['Content-Type'] = 'application/json';
-http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 export default http;

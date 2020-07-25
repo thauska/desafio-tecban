@@ -9,16 +9,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "prop-types": "^15.7.2",
-    "styled-components": "^5.1.1",
-    "react": "16.13.1",
-    "react-native": "0.63.2",
     "@react-native-community/checkbox": "^0.4.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/compat": "^5.1.26",
     "@react-navigation/native": "^5.5.1",
     "@react-navigation/stack": "^5.5.1",
+    "axios": "^0.19.2",
+    "prop-types": "^15.7.2",
+    "qs": "^6.9.4",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-popup-menu": "^0.15.9",
     "react-native-reanimated": "^1.9.0",
@@ -27,18 +27,20 @@
     "react-native-svg": "^12.1.0",
     "react-native-svg-transformer": "^0.14.3",
     "react-native-tiny-toast": "^1.0.7",
+    "react-native-url-polyfill": "^1.2.0",
     "react-native-vector-icons": "^7.0.0",
-    "react-native-webview": "^10.2.3"
+    "react-native-webview": "^10.2.3",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
-    "eslint": "^6.5.1",
-    "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.13.1",
     "babel-plugin-root-import": "^6.5.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1"
+    "eslint": "^6.5.1",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1"
   }
 }
