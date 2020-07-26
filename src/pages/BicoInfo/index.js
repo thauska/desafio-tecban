@@ -1,20 +1,33 @@
 import React from 'react';
 import {Container as MainContainer} from '~/styles';
-
 import CardInfoBico from '~/components/CardInfoBico'
-
+import {navigate} from '~/services/navigator'
+import {bicosGet} from '~/services/api';
 import {Container, ScrollContainer} from './styles';
 
-const BicoInfo = () => {
+const BicoInfo = ({route}) => {
+  const id = route.params.id
+
+  const [bico, changeBico] = React.useState({title: 'Carregando...'});
+
+  const loadApi = () => {
+    bicosGet(id).then(bicosData => {
+      console.log(bicosData)
+      changeBico(bicosData.list[0])
+    })
+  }
+
+  React.useEffect(loadApi, []);
+
   return (
     <MainContainer>
       <ScrollContainer>
         <Container>
           <CardInfoBico
-            title='Thânia Ramos'
-            subtitle='Diarista'
-            photo='https://avatars1.githubusercontent.com/u/5731176?s=460'
-            description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam'
+            title={bico.name}
+            subtitle={bico.type}
+            photo={bico.photo}
+            description={bico.description}
           />
         </Container>
       </ScrollContainer>

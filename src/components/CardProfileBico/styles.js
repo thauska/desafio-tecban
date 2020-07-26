@@ -7,8 +7,7 @@ export const Card = styled.TouchableOpacity.attrs({
   elevation: 1.5,
 })`
   background: #FFF;
-  flex: 1;
-  width: 100%;
+  width: 97%;
   border-radius: 32px;
   margin-top: 12px;
   margin-left: 6px;
