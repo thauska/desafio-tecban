@@ -4,7 +4,7 @@ import {startAuthentication} from '~/services/api';
 import {navigate} from '~/services/navigator'
 import {Container, Embed} from './styles';
 
-const Login = ({route}) => {
+const PayBico = ({route}) => {
   const type = route.params.type
   const bank = route.params.bank
 
@@ -48,6 +48,6 @@ const Login = ({route}) => {
   );
 };
 
-Login.propTypes = {};
+PayBico.propTypes = {};
 
-export default Login;
+export default PayBico;

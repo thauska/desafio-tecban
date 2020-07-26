@@ -8,6 +8,11 @@ import BicosList from '~/pages/BicosList';
 import BicoInfo from '~/pages/BicoInfo';
 import SelectBank from '~/pages/SelectBank';
 import PeddingBicosList from '~/pages/PeddingBicosList';
+import BicoDone from '~/pages/BicoDone'
+import HomePrestador from '~/pages/HomePrestador'
+import RequestCredit from '~/pages/RequestCredit'
+import CreditDone from '~/pages/CreditDone'
+import QRCode from '~/pages/QRCode'
 
 const paths = [
   {
@@ -39,7 +44,32 @@ const paths = [
     path: 'PeddingBicosList',
     title: 'PeddingBicosList',
     screen: PeddingBicosList
-  }, 
+  },
+  {
+    path: 'BicoDone',
+    title: 'BicoDone',
+    screen: BicoDone
+  },
+  {
+    path: 'HomePrestador',
+    title: 'HomePrestador',
+    screen: HomePrestador
+  },
+  {
+    path: 'RequestCredit',
+    title: 'RequestCredit',
+    screen: RequestCredit
+  },
+  {
+    path: 'CreditDone',
+    title: 'CreditDone',
+    screen: CreditDone
+  },
+  {
+    path: 'QRCode',
+    title: 'QRCode',
+    screen: QRCode
+  }
 ];
 
 export default function Routes() {
@@ -62,6 +92,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="Main">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="main" >{renderRoutes()}</Stack.Navigator>
   );
 }

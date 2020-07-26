@@ -6,7 +6,7 @@ import CardPeddingBico from '~/components/CardPeddingBico'
 
 import {Container, ScrollContainer} from './styles';
 
-const PeddingBicosList = () => {
+const PeddingBicosList = ({route}) => {
   const [bicos, changeBicos] = React.useState([]);
 
   const loadApi = () => {
@@ -29,7 +29,7 @@ const PeddingBicosList = () => {
               description={bico.description}
               date={bico.date}
               amount={bico.amount}
-              onPress={() => {navigate('BicoInfo', {id: bico.id})}}
+              onPress={() => {navigate('BicoDone', {id: bico.id})}}
             />
           )}
         </Container>
