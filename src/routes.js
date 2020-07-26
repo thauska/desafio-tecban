@@ -12,6 +12,7 @@ import BicoDone from '~/pages/BicoDone'
 import HomePrestador from '~/pages/HomePrestador'
 import RequestCredit from '~/pages/RequestCredit'
 import CreditDone from '~/pages/CreditDone'
+import QRCode from '~/pages/QRCode'
 
 const paths = [
   {
@@ -63,6 +64,11 @@ const paths = [
     path: 'CreditDone',
     title: 'CreditDone',
     screen: CreditDone
+  },
+  {
+    path: 'QRCode',
+    title: 'QRCode',
+    screen: QRCode
   }
 ];
 
@@ -86,6 +92,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="Main" >{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="main" >{renderRoutes()}</Stack.Navigator>
   );
 }
