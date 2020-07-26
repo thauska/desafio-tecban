@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container as MainContainer} from '~/styles';
 import ButtonText from '~/components/ButtonText'
+import Header from '~/components/Header'
 import {navigate} from '~/services/navigator'
  
 import {Container, ScrollContainer, Title, Description} from './styles';
@@ -8,6 +9,7 @@ import {Container, ScrollContainer, Title, Description} from './styles';
 const Main = () => {
   return (
     <MainContainer>
+      <Header />
       <Container>
         <ScrollContainer>
           <Title>Bem-vindo</Title>
