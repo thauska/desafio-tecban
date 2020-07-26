@@ -5,21 +5,22 @@ import {colors} from '~/styles';
 
 export const Container = styled(Animated.View)`
     flex: 1;
+    max-height: 500px;
+    z-index: 5;
+`;
+
+export const HeaderAnimated = styled.View`
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 10;
-    height: 500px;
+    height: 100%;
     background: ${(prop) => prop.backgroundColor || colors.colorBlue};
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
 `;
 
-export const Content = styled(Animated.View)`
-    flex: 1;
+export const ContContent = styled.View`
     padding: 0 60px;
-    justify-content: center;
+    flex: 1;
+    justify-content: flex-end;
 `;
 
 export const Income = styled.Text`
@@ -36,18 +37,27 @@ export const Money = styled.Text`
     text-align: center;
     color: ${colors.textLight}
 `;
-export const Footer = styled(Animated.View)`
-    position: absolute;
+export const Footer = styled.View`
+    flex:1
     flex-direction: row;
-    align-items: center;
+    justify-content: space-around;
     padding: 40px;
-    bottom: 0;
+`;
+
+export const FlexEnd = styled.View`
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-end;
 `;
 
 export const TextView = styled.View`
     flex: 1;
+    flex-direction: column;
 `;
 
+export const AppLogo = styled.Image`
+    margin-right: 10px;
+`;
 
 export const TextLogo = styled.Text`
     font-size: 18px;
@@ -66,9 +76,4 @@ export const IconSearch = styled(Icon).attrs({
 })`
     color: ${colors.textLight}
     font-size: 40px;
-`;
-
-export const AppLogo = styled.Image`
-    margin-right: 10px;
-    align-content: center;
 `;
