@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Container as MainContainer } from "~/styles";
 import ButtonText from "~/components/ButtonText";
@@ -14,7 +13,6 @@ import {
 
 import man2 from "~/assets/img/man2.png";
 import peopleTaking from "~/assets/img/peopleTaking.png";
-
 
 const Main = () => {
   return (

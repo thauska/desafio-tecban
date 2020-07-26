@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
-import { Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '~/styles';
 
-export const Container = styled(Animated.View)`
+export const Container = styled.View`
     flex: 1;
     max-height: 500px;
     z-index: 5;
