@@ -4,9 +4,12 @@ import ButtonText from '~/components/ButtonText'
 import {navigate} from '~/services/navigator'
  
 import {Container, ScrollContainer, Title, Description} from './styles';
+import Header from '~/components/Header'
 
 const Main = () => {
   return (
+    <>
+    <Header />
     <MainContainer>
       <Container>
         <ScrollContainer>
@@ -19,6 +22,7 @@ const Main = () => {
         </ScrollContainer>
       </Container>
     </MainContainer>
+    </>
   );
 };
 
