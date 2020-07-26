@@ -3,6 +3,8 @@ export default {
   statusBar: '#F2F2F2',
   textLight: '#FFFFFF',
   textDark: '#000000',
+  textGrey: '#707070',
+  textWhite: '#fff',
   textMono: '#707070',
   buttonPrimary: '#F2B84B',
   buttonSecundary: '#F24141',
