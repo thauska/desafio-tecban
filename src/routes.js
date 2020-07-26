@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 // PAGES
 import Main from '~/pages/Main';
 import Login from '~/pages/Login';
+import BicosList from '~/pages/BicosList'
 
 const paths = [
   {
@@ -16,6 +17,11 @@ const paths = [
     title: 'Login',
     screen: Login,
   },
+  {
+    path: 'BicosList',
+    title: 'Lista de bicos',
+    screen: BicosList
+  }
 ];
 
 export default function Routes() {
@@ -38,6 +44,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="Main">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="BicosList">{renderRoutes()}</Stack.Navigator>
   );
 }
