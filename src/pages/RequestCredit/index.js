@@ -1,5 +1,7 @@
 import React from "react";
 
+import {navigate} from '~/services/navigator'
+
 import {
   Container,
   Input,
@@ -12,13 +14,15 @@ import {
 } from "./styles";
 
 const RequestCredit = () => {
+  const [amount, onChangeText] = React.useState('')
+
   return (
     <Container>
       <Text>O BICOS te auxilia com microcrédito para os seus serviçõs:</Text>
 
       <FormContainer>
         <Text>De quanto você precisa?</Text>
-        <Input></Input>
+        <Input onChangeText={onChangeText}></Input>
         <Text>Quando?</Text>
         <Input></Input>
         <Text>Justifique a sua solicitação de crédito</Text>
@@ -28,7 +32,7 @@ const RequestCredit = () => {
         <TextInput></TextInput>
 
         <Button>
-          <ButtonText>Solicitar Microcrédito</ButtonText>
+          <ButtonText onPress={() => {navigate('CreditDone', {amount})}}>Solicitar Microcrédito</ButtonText>
         </Button>
       </FormContainer>
     </Container>

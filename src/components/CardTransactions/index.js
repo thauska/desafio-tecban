@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import {Card, DescriptionView, InfoView, Title, Date, Valor} from './styles';
 
 const CardTransactions = ({name, date, amount, ...rest}) => {
+  if (!amount) {
+    amount = ''
+  }
   const isPositive = Number(amount) > 0;
 
   return (

@@ -10,6 +10,8 @@ import SelectBank from '~/pages/SelectBank';
 import PeddingBicosList from '~/pages/PeddingBicosList';
 import BicoDone from '~/pages/BicoDone'
 import HomePrestador from '~/pages/HomePrestador'
+import RequestCredit from '~/pages/RequestCredit'
+import CreditDone from '~/pages/CreditDone'
 
 const paths = [
   {
@@ -51,6 +53,16 @@ const paths = [
     path: 'HomePrestador',
     title: 'HomePrestador',
     screen: HomePrestador
+  },
+  {
+    path: 'RequestCredit',
+    title: 'RequestCredit',
+    screen: RequestCredit
+  },
+  {
+    path: 'CreditDone',
+    title: 'CreditDone',
+    screen: CreditDone
   }
 ];
 
@@ -74,6 +86,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="HomePrestador">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="RequestCredit">{renderRoutes()}</Stack.Navigator>
   );
 }

@@ -7,7 +7,7 @@ import ButtonText from '~/components/ButtonText'
 
 const BicoDone = () => {
   const loadApi = () => {
-    bicoDone('id')
+    bicoDone('7e7ff095-5a47-40ff-8419-10a5fd379d07')
   }
 
   React.useEffect(loadApi, []);

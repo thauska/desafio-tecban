@@ -100,3 +100,27 @@ export async function bicosAdd(name, photo, description, type) {
 		console.error(error);
 	}
 }
+
+export async function creditDone(id, amount) {
+	try {
+		const data = qs.stringify({
+			amount,
+			date: '26/07/2020',
+			name: 'Crédito'
+		 })
+
+		const config = {
+			method: 'post',
+			url: `/transactions/add/${id}`,
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			data
+		}
+
+		const response = await HTTPClient(config);
+		return response.data;
+	} catch (error) { 
+		console.error(error);
+	}
+}
