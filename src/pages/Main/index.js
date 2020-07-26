@@ -29,7 +29,7 @@ const Main = () => {
             icon="arrow-right"
             text="Sou prestador"
             onPress={() => {
-              navigate("SelectBank", { type: "bico" });
+              navigate("SelectBank", { type: "admin" });
             }}
             backgroundColor="#D9483B"
           />
@@ -42,7 +42,7 @@ const Main = () => {
             text="Sou Cliente"
             backgroundColor="#5BD9D9"
             onPress={() => {
-              navigate("SelectBank", { type: "admin" });
+              navigate("SelectBank", { type: "bico" });
             }}
           />
         </ScrollContainer>

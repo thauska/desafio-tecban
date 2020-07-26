@@ -11,7 +11,7 @@ const OptionsCarrosel = (props) => {
       buttonColor: '#F2B84B',
       optionName: 'SAQUE',
       optionDescriton: 'Saque seu dinheiro',
-      onPress: () => {}
+      onPress: () => {navigate('WithdrawMoney')}
     },
     {
       id: 1,

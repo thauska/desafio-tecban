@@ -13,6 +13,7 @@ import HomePrestador from '~/pages/HomePrestador'
 import RequestCredit from '~/pages/RequestCredit'
 import CreditDone from '~/pages/CreditDone'
 import QRCode from '~/pages/QRCode'
+import WithdrawMoney from '~/pages/WithdrawMoney'
 
 const paths = [
   {
@@ -69,6 +70,11 @@ const paths = [
     path: 'QRCode',
     title: 'QRCode',
     screen: QRCode
+  },
+  {
+    path: 'WithdrawMoney',
+    title: 'WithdrawMoney',
+    screen: WithdrawMoney
   }
 ];
 

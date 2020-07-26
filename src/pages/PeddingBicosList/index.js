@@ -3,7 +3,7 @@ import {Container as MainContainer} from '~/styles';
 import {peddingBicosGet} from '~/services/api';
 import {navigate} from '~/services/navigator'
 import CardPeddingBico from '~/components/CardPeddingBico'
-
+import ProviderHeader from "~/components/ProviderHeader";
 import {Container, ScrollContainer} from './styles';
 
 const PeddingBicosList = ({route}) => {
@@ -20,6 +20,7 @@ const PeddingBicosList = ({route}) => {
 
   return (
     <MainContainer>
+      <ProviderHeader />
       <ScrollContainer>
         <Container>
           {bicos.map(bico =>

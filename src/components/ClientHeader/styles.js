@@ -4,7 +4,7 @@ import {colors} from '~/styles';
 
 export const Container = styled.View`
     flex: 1;
-    max-height: 500px;
+    max-height: 300px;
     z-index: 5;
 `;
 

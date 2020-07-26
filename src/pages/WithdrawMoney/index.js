@@ -11,6 +11,8 @@ import {
   SubmitButtonText,
 } from "./styles";
 
+import {navigate} from '~/services/navigator'
+
 const WithdrawMoney = () => {
   const [money, setMoney] = React.useState("");
   return (
@@ -30,7 +32,7 @@ const WithdrawMoney = () => {
         </InputContainer>
       </ScrollContainer>
       <SubmitButton>
-        <SubmitButtonText>PRÓXIMO</SubmitButtonText>
+        <SubmitButtonText onPress={() => {navigate('QRCode')}} >PRÓXIMO</SubmitButtonText>
       </SubmitButton>
     </Container>
   );

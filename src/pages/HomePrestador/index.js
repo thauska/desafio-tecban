@@ -4,6 +4,7 @@ import {transactionsGet} from '~/services/api';
 import {navigate} from '~/services/navigator'
 import CardTransactions from '~/components/CardTransactions'
 import OptionsCarrosel from '~/components/OptionsCarrosel'
+import ProviderHeader from "~/components/ProviderHeader";
 
 import {Container, Cards, ScrollContainer} from './styles';
 
@@ -23,6 +24,7 @@ const HomePrestador = () => {
 
   return (
     <MainContainer>
+      <ProviderHeader />
       <ScrollContainer>
         <Container>
           {transactions.map((transaction) => <CardTransactions

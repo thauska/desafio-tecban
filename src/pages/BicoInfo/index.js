@@ -4,6 +4,7 @@ import CardInfoBico from '~/components/CardInfoBico'
 import {navigate} from '~/services/navigator'
 import {bicosGet} from '~/services/api';
 import {Container, ScrollContainer} from './styles';
+import ClientHeader from "~/components/ClientHeader";
 
 const BicoInfo = ({route}) => {
   const id = route.params.id
@@ -21,6 +22,7 @@ const BicoInfo = ({route}) => {
 
   return (
     <MainContainer>
+      <ClientHeader />
       <ScrollContainer>
         <Container>
           <CardInfoBico
