@@ -46,6 +46,21 @@ export async function peddingBicosGet(userId) {
 	}
 }
 
+export async function bicoDone(id) {
+	try {
+		const config = {
+			method: 'get',
+			url: `/done/bico/${id}`,
+			headers: {}
+		};
+
+		const response = await HTTPClient(config);
+		return response.data;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 export async function bicosAdd(name, photo, description) {
 	try {
 		const data = qs.stringify({
