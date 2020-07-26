@@ -5,8 +5,8 @@ export const Container = styled.View`
   background: ${colors.background};
   flex: 1;
   align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: flex-start;
+  flex-direction: column;
   overflow: hidden;
   background: #F1F1F1;
 `;
