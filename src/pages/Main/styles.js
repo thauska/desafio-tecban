@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import {colors, ScrollContainer as ScrollContainerComponent} from '~/styles';
+import styled from "styled-components/native";
+import { colors, ScrollContainer as ScrollContainerComponent } from "~/styles";
 
 export const Container = styled.View`
   background: ${colors.background};
@@ -12,27 +12,34 @@ export const Container = styled.View`
 export const ScrollContainer = styled(ScrollContainerComponent).attrs({
   contentContainerStyle: {
     flexGrow: 1,
-    justifyContent: 'center',
-    flexDirection: 'column',
+    justifyContent: "center",
+    flexDirection: "column",
   },
 })`
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 `;
 
 export const Title = styled.Text`
-  font-family: 'Roboto';
-  font-size: 29px;
-  font-weight: 700;
-  margin-left: 64px;
-  color: ${colors.textDark};
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 500;
+  color: ${colors.colorBlue};
 `;
 
 export const Description = styled.Text`
-  font-family: 'Roboto';
-  font-size: 15px;
-  margin-bottom: 12px;
-  margin-left: 64px;
+  /* font-family: "Roboto"; */
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0px;
   font-weight: 500;
   color: ${colors.textDark};
 `;
+
+export const Image = styled.Image`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-self: center;
+`;
+
+
