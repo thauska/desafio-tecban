@@ -1,21 +1,52 @@
-import React from 'react';
-import {Container as MainContainer} from '~/styles';
-import ButtonText from '~/components/ButtonText'
-import {navigate} from '~/services/navigator'
- 
-import {Container, ScrollContainer, Title, Description} from './styles';
+
+import React from "react";
+import { Container as MainContainer } from "~/styles";
+import ButtonText from "~/components/ButtonText";
+import { navigate } from "~/services/navigator";
+
+import {
+  Container,
+  ScrollContainer,
+  Title,
+  Description,
+  Image,
+} from "./styles";
+// import Header from "~/components/Header";
+import man2 from "~/assets/img/man2.png";
+import peopleTaking from "~/assets/img/peopleTaking.png";
+
 
 const Main = () => {
   return (
     <MainContainer>
       <Container>
         <ScrollContainer>
-          <Title>Bem-vindo</Title>
-          <Description>Ao BICO, seu companheiro de trabalho.</Description>
+          <Title>Registre-se no Bicos</Title>
 
-          <ButtonText text='Quero encontrar bicos' onPress={() => {navigate('SelectBank', {type: 'bico'})}} style={{marginBottom: 5}} backgroundColor='#5BD9D9' />
-
-          <ButtonText text='Quero realizar bicos' backgroundColor='#D9483B' onPress={() => {navigate('SelectBank', {type: 'admin'})}} />
+          <Image source={man2} />
+          <Description>
+            Para quem quer conseguir mais serviços toque nesse botão
+          </Description>
+          <ButtonText
+            icon="arrow-right"
+            text="Sou prestador"
+            onPress={() => {
+              navigate("SelectBank", { type: "bico" });
+            }}
+            backgroundColor="#D9483B"
+          />
+          <Image source={peopleTaking} />
+          <Description>
+            Se você está procurando um prestados de serviços toque nesse botão
+          </Description>
+          <ButtonText
+            icon="arrow-right"
+            text="Sou Cliente"
+            backgroundColor="#5BD9D9"
+            onPress={() => {
+              navigate("SelectBank", { type: "admin" });
+            }}
+          />
         </ScrollContainer>
       </Container>
     </MainContainer>
