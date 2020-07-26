@@ -1,17 +1,24 @@
 import styled from 'styled-components/native';
+import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '~/styles';
 
 export const Button = styled.TouchableOpacity`
   flex-direction: row;
   background: ${(prop) => prop.backgroundColor || colors.buttonBackground};
-  border-radius: 8px;
+  border-radius: 20px;
 `;
 
 export const Text = styled.Text`
   font-size: 18px;
-  padding: 12.5px;
-  color: ${colors.buttonText};
+  padding: 13px;
+  color: ${(prop) => prop.textColor || colors.textLight};
   text-align: center;
   width: 100%;
-  font-family: 'Roboto';
+  font-family: 'Poppins';
+`;
+
+export const Icon = styled(IconMaterial)`
+  color: ${(prop) => prop.textColor || colors.textLight};
+  font-size: 18px;
+  margin-left: 16px;
 `;

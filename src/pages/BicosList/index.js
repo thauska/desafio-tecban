@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container as MainContainer} from '~/styles';
 
-import CardProfilePico from '~/components/CardProfilePico'
+import CardProfileBico from '~/components/CardProfileBico'
 
 import {Container, ScrollContainer} from './styles';
 
@@ -10,7 +10,7 @@ const BicosList = () => {
     <MainContainer>
       <ScrollContainer>
         <Container>
-          <CardProfilePico
+          <CardProfileBico
             title='Thânia Ramos'
             subtitle='Diarista'
             photo='https://avatars1.githubusercontent.com/u/5731176?s=460'

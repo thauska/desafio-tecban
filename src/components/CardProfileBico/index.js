@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, Photo, DescriptionView, Title, SubTitle, IconView, TextRate, IconLove, RateView, IconStar, IconStarHalf} from './styles';
 
-const CardProfilePico = ({onPress, title, subtitle, photo, ...rest}) => {
+const CardProfileBico = ({onPress, title, subtitle, photo, ...rest}) => {
   return (
     <Card onPress={onPress} {...rest}>
       <Photo source={{
@@ -32,11 +32,11 @@ const CardProfilePico = ({onPress, title, subtitle, photo, ...rest}) => {
   );
 };
 
-CardProfilePico.propTypes = {
+CardProfileBico.propTypes = {
   onPress: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired
 };
 
-export default CardProfilePico;
+export default CardProfileBico;
