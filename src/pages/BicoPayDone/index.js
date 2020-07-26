@@ -4,13 +4,10 @@ import {bicoDone} from '~/services/api';
 import {Container, Title, Description, Circle, Icon} from './styles';
 import {navigate} from '~/services/navigator';
 import ButtonText from '~/components/ButtonText'
-import {useNavigation} from '@react-navigation/native';
 
-const BicoDone = ({route}) => {
-  const navigation = useNavigation();
-
+const BicoPayDone = () => {
   const loadApi = () => {
-    bicoDone(route.params.id)
+    // donePay('22d2d333d2-5a47-40ff-8419-10a5fd379d07')
   }
 
   React.useEffect(loadApi, []);
@@ -21,14 +18,14 @@ const BicoDone = ({route}) => {
           <Circle>
             <Icon name='check-bold' />
           </Circle>
-          <Title>BICO REALIZADO!</Title>
-          <Description>O Cliente já efetuou o pagamento! Em breve o pagamento será depositado no seu saldo!</Description>
-          <ButtonText text='Entendi' onPress={() => {navigation.replace('PeddingBicosList')}} backgroundColor='#D9483B' />
+          <Title>BICO SOLICITADO!</Title>
+          <Description>Pagamento efetuado!</Description>
+          <ButtonText text='Entendi' onPress={() => {navigate('BicoList')}} backgroundColor='#D9483B' />
       </Container>
     </MainContainer>
   );
 };
 
-BicoDone.propTypes = {};
+BicoPayDone.propTypes = {};
 
-export default BicoDone;
+export default BicoPayDone;

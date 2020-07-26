@@ -3,6 +3,7 @@ import {Container as MainContainer} from '~/styles';
 import {bicosGet} from '~/services/api';
 import {navigate} from '~/services/navigator'
 import CardProfileBico from '~/components/CardProfileBico'
+import Header from "~/components/Header";
 
 import {Container, ScrollContainer} from './styles';
 
@@ -20,6 +21,7 @@ const BicosList = () => {
 
   return (
     <MainContainer>
+      <Header />
       <ScrollContainer>
         <Container>
           {bicos.map(bico =>

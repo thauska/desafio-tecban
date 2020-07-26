@@ -11,7 +11,7 @@ import {
   Description,
   Image,
 } from "./styles";
-// import Header from "~/components/Header";
+
 import man2 from "~/assets/img/man2.png";
 import peopleTaking from "~/assets/img/peopleTaking.png";
 
