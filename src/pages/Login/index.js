@@ -1,15 +1,18 @@
 import React from 'react';
 import {Container as MainContainer} from '~/styles';
 import {startAuthentication} from '~/services/api';
-
+import {navigate} from '~/services/navigator'
 import {Container, Embed} from './styles';
 
-const Main = () => {
+const Login = ({route}) => {
+  const type = route.params.type
+  const bank = route.params.bank
+
   const webViewRef = React.useRef(null);
-  const [url, changeUrl] = React.useState('https://github.com');
+  const [url, changeUrl] = React.useState('');
 
   const loadApi = () => {
-    startAuthentication(1).then((data) => changeUrl(data.url));
+    startAuthentication(bank).then((data) => changeUrl(data.url));
   };
 
   React.useEffect(loadApi, []);
@@ -26,10 +29,16 @@ const Main = () => {
             if (url.startsWith('https://www.google.co.uk')) {
               if (url.includes('access_denied')) {
                 loadApi();
+                console.error('Senha incorreta ou problema no login!')
               } else {
                 const urlObject = new URL(url);
                 const code = urlObject.searchParams.get('code');
                 console.log('Code', code);
+                if (type === 'bico') {
+                  navigate('BicosList', {code})
+                } else {
+                  navigate('PeddingBicosList', {code})
+                }
               }
             }
           }}
@@ -39,6 +48,6 @@ const Main = () => {
   );
 };
 
-Main.propTypes = {};
+Login.propTypes = {};
 
-export default Main;
+export default Login;

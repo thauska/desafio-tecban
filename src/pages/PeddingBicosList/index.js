@@ -1,16 +1,16 @@
 import React from 'react';
 import {Container as MainContainer} from '~/styles';
-import {bicosGet} from '~/services/api';
+import {peddingBicosGet} from '~/services/api';
 import {navigate} from '~/services/navigator'
-import CardProfileBico from '~/components/CardProfileBico'
+import CardPeddingBico from '~/components/CardPeddingBico'
 
 import {Container, ScrollContainer} from './styles';
 
-const BicosList = () => {
+const PeddingBicosList = () => {
   const [bicos, changeBicos] = React.useState([]);
 
   const loadApi = () => {
-    bicosGet('all').then(bicosData => {
+    peddingBicosGet('7e7ff095-5a47-40ff-8419-10a5fd379d07').then(bicosData => {
       console.log(bicosData)
       changeBicos(bicosData.list)
     })
@@ -23,11 +23,12 @@ const BicosList = () => {
       <ScrollContainer>
         <Container>
           {bicos.map(bico =>
-            <CardProfileBico
+            <CardPeddingBico
               key={bico.id}
               title={bico.name}
-              subtitle={bico.type}
-              photo={bico.photo}
+              description={bico.description}
+              date={bico.date}
+              amount={bico.amount}
               onPress={() => {navigate('BicoInfo', {id: bico.id})}}
             />
           )}
@@ -37,6 +38,6 @@ const BicosList = () => {
   );
 };
 
-BicosList.propTypes = {};
+PeddingBicosList.propTypes = {};
 
-export default BicosList;
+export default PeddingBicosList;
