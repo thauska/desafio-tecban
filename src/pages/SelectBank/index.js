@@ -15,7 +15,9 @@ const SelectBank = ({route}) => {
 
           <ButtonText text='Banco 01' onPress={() => {navigate('Login', {type: route.params.type, bank: '1'})}} style={{marginBottom: 5}} backgroundColor='#F2B84B' />
 
-          <ButtonText text='Banco 02' backgroundColor='#F2B84B' onPress={() => {navigate('Login', {type: route.params.type, bank: '2'})}} />
+          <ButtonText text='Banco 02' backgroundColor='#F2B84B' onPress={() => {navigate('Login', {type: route.params.type, bank: '2'})}} style={{marginBottom: 5}} />
+
+          <ButtonText text='Criar banco rápido & Sem complicação' onPress={() => {navigate('Login', {type: route.params.type, bank: '1'})}} backgroundColor='#F2B84B' />
         </ScrollContainer>
       </Container>
     </MainContainer>

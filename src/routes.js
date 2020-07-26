@@ -6,7 +6,8 @@ import Main from '~/pages/Main';
 import Login from '~/pages/Login';
 import BicosList from '~/pages/BicosList';
 import BicoInfo from '~/pages/BicoInfo';
-import SelectBank from '~/pages/SelectBank'
+import SelectBank from '~/pages/SelectBank';
+import PeddingBicosList from '~/pages/PeddingBicosList';
 
 const paths = [
   {
@@ -33,7 +34,12 @@ const paths = [
     path: 'SelectBank',
     title: 'SelectBank',
     screen: SelectBank
-  }
+  }, 
+  {
+    path: 'PeddingBicosList',
+    title: 'PeddingBicosList',
+    screen: PeddingBicosList
+  }, 
 ];
 
 export default function Routes() {

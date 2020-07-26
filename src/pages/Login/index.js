@@ -36,6 +36,8 @@ const Login = ({route}) => {
                 console.log('Code', code);
                 if (type === 'bico') {
                   navigate('BicosList', {code})
+                } else {
+                  navigate('PeddingBicosList', {code})
                 }
               }
             }
