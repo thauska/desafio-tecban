@@ -9,16 +9,19 @@ import {
   Title,
   Description,
   Image,
+  Logo
 } from "./styles";
-// import Header from "~/components/Header";
+
 import man2 from "~/assets/img/man2.png";
 import peopleTaking from "~/assets/img/peopleTaking.png";
+import logo from '~/assets/img/logo_azul_escuro.png'
 
 const Main = () => {
   return (
     <MainContainer>
       <Container>
         <ScrollContainer>
+          <Logo source={logo} />
           <Title>Registre-se no Bicos</Title>
 
           <Image source={man2} />
