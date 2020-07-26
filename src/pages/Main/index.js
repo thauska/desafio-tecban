@@ -8,8 +8,6 @@ import Header from '~/components/Header'
 
 const Main = () => {
   return (
-    <>
-    <Header />
     <MainContainer>
       <Container>
         <ScrollContainer>
@@ -22,7 +20,6 @@ const Main = () => {
         </ScrollContainer>
       </Container>
     </MainContainer>
-    </>
   );
 };
 
