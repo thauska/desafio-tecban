@@ -4,6 +4,8 @@ export default {
   textLight: '#FFFFFF',
   textDark: '#000000',
   textMono: '#393838DE',
+  textGrey: '#707070',
+  textWhite: '#fff',
   buttonBackground: '#76e497',
   colorBlue: '#5BD9D9',
   colorYellow: '#F2B84B',
