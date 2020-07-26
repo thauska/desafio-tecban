@@ -43,10 +43,8 @@ export const Image = styled.Image`
 `;
 
 export const Logo = styled.Image`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   align-self: center;
-  height: 100px;
-  width: 250px;
 `;
 
 
