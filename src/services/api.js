@@ -46,12 +46,43 @@ export async function peddingBicosGet(userId) {
 	}
 }
 
-export async function bicosAdd(name, photo, description) {
+export async function transactionsGet(id) {
+	try {
+		const config = {
+			method: 'get',
+			url: `/transactions/get/${id}`,
+			headers: {}
+		};
+
+		const response = await HTTPClient(config);
+		return response.data;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+export async function bicoDone(id) {
+	try {
+		const config = {
+			method: 'get',
+			url: `/done/bico/${id}`,
+			headers: {}
+		};
+
+		const response = await HTTPClient(config);
+		return response.data;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+export async function bicosAdd(name, photo, description, type) {
 	try {
 		const data = qs.stringify({
 			'name': name,
 			'photo': photo,
-			'description': description
+			'description': description,
+			'type': type
 		 })
 
 		const config = {
