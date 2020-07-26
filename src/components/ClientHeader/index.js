@@ -3,7 +3,7 @@ import {Container, FlexEnd, ContContent, HeaderAnimated, Footer, Income, Money, 
 import img from '~/assets/img';
 
 
-const Header = () => {
+const ClientHeader = () => {
 
     return (
         <Container>
@@ -27,4 +27,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default ClientHeader;
