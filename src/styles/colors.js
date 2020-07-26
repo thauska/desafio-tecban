@@ -10,7 +10,7 @@ export default {
   buttonText: '#FFFFFF',
   colorPimary: '#5BD9D9',
   colorSecundary: '#D9483B',
-  colorTertiary: '#521fc7'
+  colorTertiary: '#521fc7',
   buttonBackground: '#76e497',
   colorBlue: '#5BD9D9',
   colorYellow: '#F2B84B',

@@ -9,6 +9,7 @@ import BicoInfo from '~/pages/BicoInfo';
 import SelectBank from '~/pages/SelectBank';
 import PeddingBicosList from '~/pages/PeddingBicosList';
 import BicoDone from '~/pages/BicoDone'
+import HomePrestador from '~/pages/HomePrestador'
 
 const paths = [
   {
@@ -45,6 +46,11 @@ const paths = [
     path: 'BicoDone',
     title: 'BicoDone',
     screen: BicoDone
+  },
+  {
+    path: 'HomePrestador',
+    title: 'HomePrestador',
+    screen: HomePrestador
   }
 ];
 
@@ -68,6 +74,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="BicoDone">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="HomePrestador">{renderRoutes()}</Stack.Navigator>
   );
 }
