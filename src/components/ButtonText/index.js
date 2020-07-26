@@ -5,7 +5,7 @@ import {Button, Text, Icon} from './styles';
 const ButtonText = ({onPress, text, textColor, icon, backgroundColor, ...rest}) => {
   return (
     <Button onPress={onPress} backgroundColor={backgroundColor} {...rest}>
-      <Text textColor={textColor}>{text}{icon && <Icon name={icon} />}</Text>
+      <Text textColor={textColor}>{icon && <Icon name={icon} />} {text}</Text>
     </Button>
   );
 };
