@@ -50,6 +50,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="BicoInfo">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="Main">{renderRoutes()}</Stack.Navigator>
   );
 }

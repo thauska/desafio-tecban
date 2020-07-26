@@ -1,6 +1,6 @@
 export default {
-  background: '#FFFFFF',
-  statusBar: '#FFFFFF',
+  background: '#F2F2F2',
+  statusBar: '#F2F2F2',
   textLight: '#FFFFFF',
   textDark: '#000000',
   textMono: '#393838DE',
