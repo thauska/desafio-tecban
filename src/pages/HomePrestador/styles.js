@@ -19,3 +19,19 @@ export const ScrollContainer = styled(ScrollContainerComponent).attrs({
   },
 })`
 `;
+
+export const Cards = styled.View.attrs({
+  elevation: 1.5,
+})`
+  width: 96%;
+  background: #FFF;
+  border-radius: 32px;
+  margin-top: 20px;
+  margin-left: 11px;
+  margin-right: 11px;
+  padding: 13px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+`;

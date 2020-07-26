@@ -86,6 +86,6 @@ export default function Routes() {
   };
 
   return (
-    <Stack.Navigator initialRouteName="RequestCredit">{renderRoutes()}</Stack.Navigator>
+    <Stack.Navigator initialRouteName="HomePrestador">{renderRoutes()}</Stack.Navigator>
   );
 }

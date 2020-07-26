@@ -3,8 +3,9 @@ import {Container as MainContainer} from '~/styles';
 import {transactionsGet} from '~/services/api';
 import {navigate} from '~/services/navigator'
 import CardTransactions from '~/components/CardTransactions'
+import OptionsCarrosel from '~/components/OptionsCarrosel'
 
-import {Container, ScrollContainer} from './styles';
+import {Container, Cards, ScrollContainer} from './styles';
 
 const HomePrestador = () => {
   const [transactions, changeTransactions] = React.useState([]);
@@ -30,6 +31,9 @@ const HomePrestador = () => {
             date={transaction.date}
             amount={transaction.amount}
           />)}
+          <Cards>
+            <OptionsCarrosel />
+          </Cards>
         </Container>
       </ScrollContainer>
     </MainContainer>

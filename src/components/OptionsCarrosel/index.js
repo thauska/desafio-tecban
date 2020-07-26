@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, FlatList} from 'react-native';
+import {navigate} from '~/services/navigator';
 
 // import { Container } from './styles';
 
@@ -10,30 +11,34 @@ const OptionsCarrosel = (props) => {
       buttonColor: '#F2B84B',
       optionName: 'SAQUE',
       optionDescriton: 'Saque seu dinheiro',
+      onPress: () => {}
     },
     {
       id: 1,
       buttonColor: '#D9483B',
       optionName: 'CRÉDITO',
       optionDescriton: 'Solicitar Microcrédito',
+      onPress: () => {navigate('RequestCredit')}
     },
     {
       id: 4,
       buttonColor: '#5BD9D9',
       optionName: 'PAGAR',
       optionDescriton: 'Efetuar Pagamento',
+      onPress: () => {}
     },
   ];
 
   return (
-    <View>
+    <View >
       <FlatList
         horizontal={true}
         style={styles.horizontalList}
         data={options}
         renderItem={({item}) => (
           <TouchableOpacity
-            onPress={() => {}}
+            key={item.buttonColor}
+            onPress={item.onPress}
             style={[styles.goButton, {backgroundColor: item.buttonColor}]}>
             <Text style={styles.optionText}>{item.optionName}</Text>
             <Text style={styles.descritonText}>{item.optionDescriton}</Text>
@@ -68,9 +73,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   horizontalList: {
-    width: '100%',
-    backgroundColor: 'transparent',
-    bottom: 5,
+    flex: 1,
+    bottom: 1,
   },
   descritonText: {
     fontSize: 14,
