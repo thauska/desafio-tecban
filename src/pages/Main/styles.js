@@ -42,4 +42,9 @@ export const Image = styled.Image`
   align-self: center;
 `;
 
+export const Logo = styled.Image`
+  margin-bottom: 10px;
+  align-self: center;
+`;
+
 
